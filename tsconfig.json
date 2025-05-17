@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                
+    "lib": ["DOM", "ES2020"],          
+    "module": "ESNext",                
+    "outDir": "./dist",                
+    "rootDir": "./src",                
+    "strict": true,                   
+    "esModuleInterop": true,          // Для совместимости с CommonJS модулями
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,             // Пропуск проверки типов в библиотеках (ускоряет сборку)
+    "noImplicitAny": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
