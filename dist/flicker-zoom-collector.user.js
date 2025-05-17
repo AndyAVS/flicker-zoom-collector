@@ -46,7 +46,7 @@
             return;
         }
         const links = getImagesSrcList();
-        if (links.length) {
+        if (!links.length) {
             console.warn("empty imgs list");
             return;
         }

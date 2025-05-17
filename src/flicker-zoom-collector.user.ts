@@ -27,6 +27,7 @@
     };
 
     const getImagesSrcList = () => {
+
         const imgContainer = document.querySelector("div.zoom-photo-container");
         if (!imgContainer) {
             console.warn("zoom-photo-container not found");
@@ -52,13 +53,14 @@
         const targetContainer = document.querySelector(
             "div.comment-count-container"
         );
+
         if (!targetContainer) {
             console.warn("comment-count-container not found");
             return;
         }
 
         const links = getImagesSrcList();
-        if (links.length) {
+        if (!links.length) {
             console.warn("empty imgs list");
             return;
         }
@@ -76,6 +78,7 @@
         });
 
         targetContainer.appendChild(list);
+
         console.log(`${links.length} links added to page`);
     };
 
