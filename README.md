@@ -8,9 +8,10 @@
 
 ### Как установить
 
-* Стянуть к себе код [скрипта](./dist/flicker-zoom-collector.js). 
+* Стянуть к себе код [скрипта](./dist/flicker-zoom-collector.user.js). 
 * Проверить его на наличие закладок и майнеров :) 
 * Добавить в tampermonkey
 
 ### Updates
+* 17.05.2025 cspell.config.json
 * 17.05.2025 README.md

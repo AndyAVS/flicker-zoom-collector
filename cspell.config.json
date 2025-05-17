@@ -1,0 +1,8 @@
+{
+  "version": "0.2",
+  "files": [
+    // "src/**/*.ts",
+    // "scripts/my-special.js"
+    "README.md"
+  ]
+}

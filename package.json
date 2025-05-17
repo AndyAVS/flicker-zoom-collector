@@ -4,8 +4,7 @@
   "description": "flickr zoom images collector",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "minify": "terser dist/flicker-zoom-collector.js -o dist/script.user.js --compress --mangle"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
