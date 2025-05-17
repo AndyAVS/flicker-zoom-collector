@@ -36,7 +36,7 @@
 
         const imgs = imgContainer.querySelectorAll(
             "img[src]"
-        ) as unknown as HTMLImageElement[];
+        ) as NodeListOf<HTMLImageElement>;
         if (!imgs.length) {
             console.warn("images not found");
             return [];
