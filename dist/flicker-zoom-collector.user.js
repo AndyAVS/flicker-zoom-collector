@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         Flickr Zoom Images Collector
 // @namespace    http://tampermonkey.net/
-// @version      0.5.9
+// @version      0.5.10
 // @description  Flickr Zoom Images Collector
 // @author       andy fullframe
 // @license      MIT
