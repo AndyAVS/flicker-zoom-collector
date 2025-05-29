@@ -13,5 +13,6 @@
 * Добавить в tampermonkey
 
 ### Updates
+* 29.05.2025 ловим нажатие "Z" независимо от раскладки
 * 17.05.2025 cspell.config.json
 * 17.05.2025 README.md

@@ -83,7 +83,7 @@
     };
 
     document.addEventListener("keydown", (e) => {
-        if (e.key.toLowerCase() === "z" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        if (e.code === "KeyZ" && !e.ctrlKey && !e.metaKey && !e.altKey) {
             e.preventDefault();
             addLinksToDom();
         }
