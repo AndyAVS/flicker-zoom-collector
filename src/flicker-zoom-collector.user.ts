@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         Flickr Zoom Images Collector
 // @namespace    http://tampermonkey.net/
-// @version      0.5.10
+// @version      0.6.3
 // @description  Flickr Zoom Images Collector
 // @author       andy fullframe
 // @license      MIT
 // @match        https://www.flickr.com/photos/*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
 
@@ -62,7 +61,6 @@
         const links = getImagesSrcList();
         if (!links.length) {
             console.warn("empty imgs list");
-            return;
         }
 
         const oldList = document.getElementById(LIST_ID);
@@ -77,10 +75,41 @@
             list.appendChild(buildListItem(link));
         });
 
-        targetContainer.appendChild(list);
+        const newExifLink = createNewExifLink();
+        if (newExifLink) {
+            const li = document.createElement("li");
+            li.appendChild(newExifLink);
+            list.appendChild(li);
+        }
 
-        console.log(`${links.length} links added to page`);
+        if (list.childNodes?.length) {
+            targetContainer.appendChild(list);
+        }
+
+        console.log(`${list.childNodes?.length} links added to page`);
     };
+
+    const createNewExifLink = () => {
+
+        const settingsLink = document.querySelector("a.show-settings") as HTMLElement;
+
+        if (!settingsLink) {
+            console.warn("'a.show-settings' not found");
+            return null;
+        }
+
+        const newLink = document.createElement("a");
+        newLink.href = "#";
+        newLink.textContent = "Show camera settings (EXIF)";
+
+        newLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            settingsLink.click();
+        });
+
+        return newLink;
+    }
+
 
     document.addEventListener("keydown", (e) => {
         if (e.code === "KeyZ" && !e.ctrlKey && !e.metaKey && !e.altKey) {
