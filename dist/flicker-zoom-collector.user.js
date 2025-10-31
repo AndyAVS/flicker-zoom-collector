@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         Flickr Zoom Images Collector
 // @namespace    http://tampermonkey.net/
-// @version      0.8.2
+// @version      0.8.3
 // @description  Flickr Zoom Images Collector
 // @author       andy fullframe
 // @license      MIT
@@ -84,7 +84,7 @@
         return newLink;
     };
     const copyPaginationToTop = () => {
-        const paginations = Array.from(document.querySelectorAll("div.view.pagination-view.photostream"));
+        const paginations = document.querySelectorAll("div.view.pagination-view.photostream");
         const container = document.querySelector("div.photostream-content-container");
         if (paginations.length === 1 && container) {
             const clonedDiv = paginations[0].cloneNode(true);
