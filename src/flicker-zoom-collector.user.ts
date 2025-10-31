@@ -129,11 +129,6 @@
         }
     });
 
-    // window.addEventListener("load", () => {
-    //     copyPaginationToTop();
-    //     addLinksToDom();
-    // });
-
     new MutationObserver(() => {
         setTimeout(copyPaginationToTop, 1500);
     }).observe(document, { subtree: true, childList: true });
