@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         Flickr Zoom Images Collector
 // @namespace    http://tampermonkey.net/
-// @version      0.6.3
+// @version      0.8.2
 // @description  Flickr Zoom Images Collector
 // @author       andy fullframe
 // @license      MIT
@@ -77,11 +77,23 @@
         const newLink = document.createElement("a");
         newLink.href = "#";
         newLink.textContent = "Show camera settings (EXIF)";
-        newLink.addEventListener("click", function (e) {
+        newLink.addEventListener("click", (e) => {
             e.preventDefault();
             settingsLink.click();
         });
         return newLink;
+    };
+    const copyPaginationToTop = () => {
+        const paginations = Array.from(document.querySelectorAll("div.view.pagination-view.photostream"));
+        const container = document.querySelector("div.photostream-content-container");
+        if (paginations.length === 1 && container) {
+            const clonedDiv = paginations[0].cloneNode(true);
+            const copied = container.appendChild(clonedDiv);
+            const currentFirstChild = container.firstChild;
+            if (currentFirstChild) {
+                container.insertBefore(copied, currentFirstChild);
+            }
+        }
     };
     document.addEventListener("keydown", (e) => {
         if (e.code === "KeyZ" && !e.ctrlKey && !e.metaKey && !e.altKey) {
@@ -89,4 +101,11 @@
             addLinksToDom();
         }
     });
+    // window.addEventListener("load", () => {
+    //     copyPaginationToTop();
+    //     addLinksToDom();
+    // });
+    new MutationObserver(() => {
+        setTimeout(copyPaginationToTop, 1500);
+    }).observe(document, { subtree: true, childList: true });
 })();
