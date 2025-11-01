@@ -8,12 +8,12 @@
 
 ### Как установить
 
-* Стянуть к себе [release код скрипта](https://github.com/AndyAVS/flicker-zoom-collector/releases/tag/v0.6.3). 
+* Стянуть к себе [release код скрипта](https://github.com/AndyAVS/flicker-zoom-collector/releases/tag/v0.8.3). 
 * Проверить его на наличие закладок и майнеров :) 
 * Добавить в tampermonkey
 
 ### Updates
-* 30.10.2025 дополнительная пагинация вверху при загрузке
+* 30.10.2025 дополнительная пагинация вверху для photostream
 * 04.10.2025 дополнительная ссылка на exif под ссылками на картинки
 * 29.05.2025 ловим нажатие "Z" независимо от раскладки
 * 17.05.2025 cspell.config.json
