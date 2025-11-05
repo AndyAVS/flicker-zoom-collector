@@ -86,7 +86,7 @@
     const copyPaginationToTop = () => {
         /* photostream view */
         const paginations = document.querySelectorAll("div.view.pagination-view");
-        let container = document.querySelector("div.photostream-content-container");
+        let container = document.querySelector("div.photo-list-header-container");
         /* album view */
         if (!container) {
             container = document.querySelector("div.view.photo-list-view");
