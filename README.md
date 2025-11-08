@@ -8,11 +8,12 @@
 
 ### Как установить
 
-* Стянуть к себе [release код скрипта](https://github.com/AndyAVS/flicker-zoom-collector/releases/download/v0.8.4/flicker-zoom-collector.user.js). 
+* Стянуть к себе [release код скрипта](https://github.com/AndyAVS/flicker-zoom-collector/releases/download/v0.8.5/flicker-zoom-collector.user.js). 
 * Проверить его на наличие закладок и майнеров :) 
 * Добавить в tampermonkey
 
 ### Updates
+* 08.11.2025 пофиксена разметка для дополнительной пагинации
 * 05.11.2025 дополнительная пагинация вверху и для альбомов
 * 30.10.2025 дополнительная пагинация вверху для photostream
 * 04.10.2025 дополнительная ссылка на exif под ссылками на картинки
