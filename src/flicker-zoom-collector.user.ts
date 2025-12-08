@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Flickr Zoom Images Collector
 // @namespace    http://tampermonkey.net/
-// @version      0.8.5
+// @version      0.8.6
 // @description  Flickr Zoom Images Collector
 // @author       andy fullframe
 // @license      MIT
@@ -127,7 +127,6 @@
 
     document.addEventListener("keydown", (e) => {
         if (e.code === "KeyZ" && !e.ctrlKey && !e.metaKey && !e.altKey) {
-            e.preventDefault();
             addLinksToDom();
         }
     });
