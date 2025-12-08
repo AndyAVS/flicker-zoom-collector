@@ -8,7 +8,7 @@
 
 ### Как установить
 
-* Стянуть к себе [release код скрипта](https://github.com/AndyAVS/flicker-zoom-collector/releases/download/v0.8.5/flicker-zoom-collector.user.js). 
+* Стянуть к себе [release код скрипта](https://github.com/AndyAVS/flicker-zoom-collector/releases/download/v0.8.6/flicker-zoom-collector.user.js). 
 * Проверить его на наличие закладок и майнеров :) 
 * Добавить в tampermonkey
 
